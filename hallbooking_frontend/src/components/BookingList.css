@@ -1,0 +1,10 @@
+.booking-table {
+    background-color: white;
+    color: black;
+  }
+  
+  .booking-table th,
+  .booking-table td {
+    padding: 10px; /* Optional: Add some padding to the table cells */
+    border-bottom: 1px solid #ddd; /* Optional: Add a thin border between rows */
+  }

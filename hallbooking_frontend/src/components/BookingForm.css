@@ -1,0 +1,168 @@
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%; /* Occupy 90% of the parent container */
+  max-width: 600px; /* Maximum width for larger screens */
+  margin: 20px auto; /* Center the form with some top/bottom margin */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+.booking-form button {
+  padding: 8px 12px; /* Reduced padding */
+  font-size: 14px;   /* Smaller font size */
+  background-color: navy;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px; /* Add some margin around buttons */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Space between buttons */
+}
+
+.button-container button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* ... other styles */
+.required-star {
+  color: red;
+  margin-right: 2px; /* Adjust spacing as needed */
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center; /* Vertically align items */
+}
+
+.form-group label {
+  width: 200px; /* Consistent label width */
+  margin-right: 10px;
+  text-align: left;
+  flex-shrink: 0; /* Prevent label from shrinking */
+}
+.booking-form .button-group {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  flex-grow: 1; /* Allow input to grow */
+  padding: 8px;
+  border: 2px solid #de1a1a;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 100px; /* Set a reasonable height for textareas */
+}
+
+.total-display {
+  padding: 8px;
+  font-weight: bold;
+}
+
+.booking-form button {
+  padding: 6px 10px;
+  margin-top: 10px;
+  background-color: navy; /* Blue */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.booking-form button:last-of-type {
+    background-color: navy; /* Red for the back button */
+    margin-right: 0;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .booking-form {
+    width: 80%; /* Wider form on larger screens */
+  }
+}
+
+body {
+  margin: 0; /* Remove default body margins */
+  font-family: sans-serif; /* Set a default font */
+}
+
+body::before { /* Use ::before pseudo-element for background */
+  content: "";
+  position: fixed; /* Cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("hall.jpg"); /* Replace with your image path */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat;
+  opacity: 0.5; /* Adjust opacity as needed (0.0 - 1.0) */
+  z-index: -1; /* Place the background behind other content */
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background to the form */
+  backdrop-filter: blur(5px); /* Optional: Add a subtle blur */
+}
+
+/* ... (rest of your existing CSS) */
+
+.booking-form button {
+  padding: 6px 10px;
+  margin-top: 10px;
+  background-color: navy;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.booking-form button:last-of-type {
+    background-color: navy;
+    margin-right: 0;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .booking-form {
+    width: 80%;
+  }
+}
