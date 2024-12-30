@@ -120,6 +120,7 @@ A web-based hall booking system developed as part of the Ascentech Interview Exe
 ## Database Design
 
 ## Procedure to insert a new booking
+```sql
 CREATE OR REPLACE FUNCTION insert_booking(
     _mobile_no VARCHAR,
     _hall_name VARCHAR,
@@ -145,8 +146,10 @@ BEGIN
     );
 END;
 $$ LANGUAGE plpgsql;
+```
 
 ## Procedure to update a booking
+```sql
 CREATE OR REPLACE FUNCTION update_booking(
     _booking_id INT,
     _mobile_no VARCHAR,
@@ -181,15 +184,19 @@ BEGIN
     WHERE booking_id = _booking_id;
 END;
 $$ LANGUAGE plpgsql;
+```
 
 ## Procedure to delete a booking
+```sql
 CREATE OR REPLACE FUNCTION delete_booking(_booking_id INT) RETURNS VOID AS $$
 BEGIN
     DELETE FROM hall_booking WHERE booking_id = _booking_id;
 END;
 $$ LANGUAGE plpgsql;
+```
 
 ## Procedure to fetch all bookings
+```sql
 CREATE OR REPLACE FUNCTION get_all_bookings() RETURNS TABLE (
     booking_id INT,
     mobile_no VARCHAR,
@@ -211,6 +218,7 @@ BEGIN
     RETURN QUERY SELECT * FROM hall_booking;
 END;
 $$ LANGUAGE plpgsql;
+```
 
 
 ## Video Demonstration
